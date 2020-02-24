@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="Online shopping checkout cart view.css">
+    <script src="https://kit.fontawesome.com/25c93b3968.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="container-left">
+        <div class="container-checkout">
+            <div>
+                <form class="billing-address">
+                    <p>Billing Address</p>
+                    <label for = "name">
+                        <i class="fas fa-user"></i>Full Name
+                    </label>
+                    <input type="text" id = "name" name="name" placeholder="Rachel Cao">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>Email
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="username@example.com">
+                    <label>
+                        <i class="fas fa-address-card"></i>Address
+                    </label for="address">
+                    <input type="text" id="address" name="address" placeholder="542 W. 15th Street">
+                    <label>
+                        <i class="fas fa-university"></i>City
+                    </label for="city">
+                    <input type='text' id="city" name="city" placeholder="New York">
+                    <label for="state">
+                        State
+                    </label>
+                    <input type="text" id="state" name="state" placeholder="NY">
+                    <label>
+                        Zip
+                    </label for="zip">
+                    <input type="number" id="zip" name="zip" placeholder="00000" pattern="[0-9]{5}">
+                </form>
+            </div>
+            <div>
+                <form class="payment">
+                    <p>Payment</p>
+                    <label>
+                        Accepted Cards
+                    </label>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-discover"></i>
+                    <label for="name-card">
+                        Name on Card
+                    </label>
+                    <input type="text" id="name-card" name="name-card" placeholder="Rachel Cao">
+                    <label>
+                        Credit card number 
+                    </label>
+                    <input type="number" id="card" name="card" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                    <label for="exp-month"> 
+                        Exp Month
+                    </label for="exp-month">
+                    <input type="number" id="exp-month" name="exp-month" placeholder="09" min="1" max="12">
+                    
+                    <label>
+                        Exp Year 
+                    </label for="exp-year">
+                    <input type="number" id="exp-year" name="exp-year" placeholder="2020" min="2020" max="2030">
+                    <label for="cvv">
+                        CVV
+                    </label>
+                    <input type="number" id="cvv" name="cvv" placeholder="000" pattern="[0-9]{3}">
+                
+                </form>
+            </div>
+        </div>
+        <label for="ship-address">
+            <input type="checkbox" id="ship-address" name="ship-address" value="true" checked> Shipping address same as billing
+        </label>
+        <input type="button" id="check" value="Continue to checkout" >
+    </div>  
+    <div class="container-right">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Cart
+                    </th>
+                    <th class="price">
+                        <i class="fas fa-shopping-cart"></i>4
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td class="item"> <a href="#">Item1</a></td>
+                <td class="price">$15</td>
+                </tr>
+                <tr>
+                    <td class="item"> <a href="#">Item2</a></td>
+                    <td class="price">$5</td>
+                </tr>
+                <tr>
+                    <td class="item"> <a href="#">Item3</a></td>
+                    <td class="price">$8</td>
+                </tr>
+                <tr>
+                    <td class="item"> <a href="#">Item4</a></td>
+                    <td class="price">$2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td class="price">$30</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html> 

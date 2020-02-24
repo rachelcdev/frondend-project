@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 1.2;
+}
+.container {
+    border:1px solid #888888;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.news-image {
+    width: 25vw;
+}
+
+.news {
+    margin: 5px;
+    padding: 5px;
+}
+.news-quote {
+    background-color:#F4F4F4;
+    border-left:5px solid #CC0000;
+    padding: 5px;
+    margin-left: 0;
+}
+.copy{
+    text-align: center;
+}
+
+.source{
+    text-decoration: none;
+}
+.source:hover{
+    color: #888888;
+}

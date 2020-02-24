@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5vw 15vw ;
+}
+p{
+    font-size: 1.3rem ;
+    line-height: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+label {
+    display:block;
+    line-height: 2rem;
+    font-size: 0.9rem;
+}
+label + input{
+    line-height: 1rem;
+    width: 90%;
+    padding:.2rem;
+}
+
+.container-left{
+    width:70%;
+    background-color: #f2f2f2;
+    padding:10px;
+    margin: 0 auto;
+    
+}
+
+.container-right{
+    width:20%;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    padding:10px;
+}
+table{
+    font-size: 1rem;
+    text-align: left;
+    width:100%;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 5px;
+    width:50%;
+}
+tfoot{
+    border-top:2px solid #888888;
+}
+tfoot .price{
+    font-weight: bold;
+}
+.price{
+    text-align: right;
+}
+a{
+    text-decoration: none;
+    color:#2FB4D8
+}
+.container-checkout{
+    display: flex;
+    flex-direction: row;
+}
+.container-checkout > div{
+    width:50%
+}
+#check {
+    width:100%;
+    background-color: #5F5F5F;
+    color:white;
+    font:1em;
+    height:2em;
+    
+}
+#check:hover{
+    background-color: #0A0A23;
+}

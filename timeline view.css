@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+:root{
+    --mian-bg-color:rgba(245, 222, 178, 0.795);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #222;
+    font-family: "Roboto", serif;
+    font-size:15px;
+    line-height: 1.2;
+    color:var(--mian-bg-color);
+    margin:20px;
+    padding: 40px;
+    
+}
+.title h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+h1{
+    font-size: 1rem;
+}
+.timeline{
+    position: relative;
+    padding:40px;
+}
+.timeline ul li {
+    position: relative;
+    padding-bottom:40px;
+    list-style: none;
+    width:50%;
+    font-size: inherit;
+    line-height: 1.2;
+    
+}
+.timeline ul li h1{
+    
+    margin: 10px 0;
+}
+.content p{
+    font-size: 1rem;
+    line-height: 1.2;
+    color:#888;
+}
+.timeline:before{
+    content: "";
+    position: absolute;
+    left:50%;
+    width: 2px;
+    height:100%;
+    margin: 0 20px;
+    
+    background: var(--mian-bg-color);
+}
+.timeline ul li:nth-child(odd){
+    
+    text-align: right;
+
+}
+.timeline ul li:nth-child(even){
+    text-align: left;
+    position: relative;
+    right:-54%;
+}
+.timeline ul li:nth-child(odd):before{
+    content: "";
+    position: absolute;
+    background: var(--mian-bg-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(245, 222, 178, 0.4);
+    right:-2rem;
+    top: 1rem;
+}
+.timeline ul li:nth-child(even):before{
+    content: "";
+    position: absolute;
+    background-color: var(--mian-bg-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(245, 222, 178, 0.4);
+    left:-2rem;
+    top: 1rem;
+}
+
+
+
+.timeline ul li:nth-child(odd) .time{
+    position: absolute;
+    background-color: var(--mian-bg-color);
+    width:5rem;
+    height:1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.5rem;
+    right:-10rem;
+    top: 1rem;
+    color:#222;
+    box-shadow: 0 0 0 5px rgba(245, 222, 178, 0.4);
+    font-weight: bold;
+}
+
+.timeline ul li:nth-child(even) .time{
+    position: absolute;
+    background-color: var(--mian-bg-color);
+    width:5rem;
+    height:1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.5rem;
+    left:-10rem;
+    top: 0.7rem;
+    color:#222;
+    box-shadow: 0 0 0 5px rgba(245, 222, 178, 0.4);
+    font-weight: bold;
+}
+
+
+footer a{
+    text-decoration: none;
+    color:#888;
+}
+footer {
+    margin-top: 20px;
+    padding-top: 30px;
+    color:#888;
+    text-align: center;
+}
+a:hover{
+    color:var(--mian-bg-color);
+}
