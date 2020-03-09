@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.hw2{
+    display: flex;
+    flex-direction: column;
+    width:40vw;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 2;
+
+}
+</style>
+</head>
+<body>
+    <div class='hw2'>
+        Debounce  <input type="text" onkeyup="debounceFunc()" id='debounce'>
+
+        Throttle <input type="text" onkeyup="throttleFunc()">
+    </div>
+    <script>
+        let values = [1,2,3,4]
+        
+        filterFunc = function(arr,fn){
+            let newArray = [];
+           
+            for(let i=0;i<arr.length;i++){
+                const result = fn(arr[i]);
+                if(result){
+                    newArray.push(arr[i]);
+                }
+            }
+            return newArray;
+        };
+        const filterValues = filterFunc(values,value=>value>2);
+        console.log(filterValues);
+
+        mapFunc = function(arr,fn){
+            let newArray = [];
+            for(let i=0;i<arr.length;i++){
+                const result = fn(arr[i]);
+                newArray.push(result);
+            }
+            return newArray;
+        };
+
+        const mapValues = mapFunc(values,value=>value*2);
+        console.log(mapValues);
+
+        const reduceFunc = function(arr,fn,initialValue){
+            let accumulator = initialValue===undefined?0:initialValue;
+            for(let i=0;i<arr.length;i++){
+                accumulator = fn(accumulator,arr[i]);
+                
+            }
+            return accumulator;
+        };
+        const reducerValues = reduceFunc(values,(accumulator,currentvalue)=>accumulator+currentvalue);
+        console.log(reducerValues);
+
+        let count = 0;
+        const getDebouceData = ()=>{
+            console.log('debounce result',count++);
+        }
+        const debounce = (fn,d)=>{
+            let timer;
+            return function(){
+                let context = this, args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(()=>{
+                    fn.apply(context,args)
+                },d)
+            }
+        }
+        
+        const debounceFunc =debounce(getDebouceData,1000);
+        
+
+        const getThrottleData = ()=>{
+            console.log('Throttle result',count++);
+        }
+        const throttle =(fn,d)=>{
+            //throttling function happens only once within certain amount of time 
+            let flag = true;
+            return function(){
+                let context = this, args = arguments;
+                if(flag){
+                    fn.apply(context,args);
+                    flag = false;
+                    setTimeout(()=>{flag=true},d)
+                }
+            }
+            
+        }
+        
+        const throttleFunc = throttle(getThrottleData,1000);
+    </script>
+</body>
+</html>
